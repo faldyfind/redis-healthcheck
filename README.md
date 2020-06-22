@@ -29,6 +29,12 @@ OR
 ./redis-healthcheck:1323 127.0.0.1:6390 "xyz123"
 ```
 
+## Test
+
+```bash
+curl http://localhost:1323/healthcheck
+```
+
 ## Response
 
 200 (OK)
