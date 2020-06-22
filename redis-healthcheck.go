@@ -12,7 +12,6 @@ import (
 )
 
 var ctx = context.Background()
-var httpStatus = ""
 var arguments = os.Args
 
 func rClient() *redis.Client {
@@ -22,6 +21,7 @@ func rClient() *redis.Client {
 	client := redis.NewClient(&redis.Options{
 		Addr:     redisAddr,
 		Password: redisPassword,
+		PoolSize: 1,
 	})
 
 	return client
@@ -43,11 +43,12 @@ func healthcheck(c echo.Context) error {
 
 	// check connection status
 	err := ping(client)
+	client.Close()
 	if err != nil {
 		fmt.Println(err)
-		return c.String(http.StatusInternalServerError, "Redis ERROR")
+		return c.String(http.StatusInternalServerError, "Redis ERROR\n")
 	} else {
-		return c.String(http.StatusOK, "Redis OK")
+		return c.String(http.StatusOK, "Redis OK\n")
 	}
 }
 
