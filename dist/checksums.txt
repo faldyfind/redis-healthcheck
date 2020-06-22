@@ -1,4 +1,0 @@
-67da8d1a30777aab4ac9edd99c934b0783268e01314b6fa7554a49587fbf5902  redis-healthcheck_v0.1.0-next_Linux_386.tar.gz
-26adc879ed09d04d143bc540815205f7424876e174636260a8bd22a48dcb4f12  redis-healthcheck_v0.1.0-next_Linux_amd64.tar.gz
-22447098b6acd70367a8279e4b5b9e3593e1970a25374dc1e3610d2954b698d5  redis-healthcheck_v0.1.0-next_Darwin_386.tar.gz
-4ceb1399e95a18a855846702cb17a79dd8ea19ed8c8c344e5c678bc728419731  redis-healthcheck_v0.1.0-next_Darwin_amd64.tar.gz
