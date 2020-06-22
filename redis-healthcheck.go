@@ -47,9 +47,9 @@ func healthcheck(c echo.Context) error {
 	if err != nil {
 		fmt.Println(err)
 		return c.String(http.StatusInternalServerError, "Redis ERROR\n")
-	} else {
-		return c.String(http.StatusOK, "Redis OK\n")
 	}
+
+	return c.String(http.StatusOK, "Redis OK\n")
 }
 
 func main() {
